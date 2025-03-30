@@ -36,16 +36,16 @@ The DOT (Deep Optimal Transport) pipeline consists of two main phases:
 #### **1- Training Phase (Offline Phase)**  
 1. **Encode Images**: Extracts feature representations from images.
 2. **Compute the OT Operator**: Learns the optimal transport mapping between noisy and clean images.
-3. **Apply the OT Transformer**: Transforms new images based on the learned mapping.
 
-#### **2- Inference Phase (Testing Phase)**  
-- Utilizes the pre-trained model to perform **predictions on new images**.
-- Evaluates the quality of restoration on clean, noisy, and restored test images.
+#### **2- Inference Phase (Testing Phase)** 
+1. **Apply the OT Transformer**: Use the trained model to transform a new image based on the learned optimal transport mapping.  
+2. **Visualize the results**: Display the transformed image to analyze qualitative performance.  
+3. **Plot the perception-distortion curve**: Evaluate the model by testing different values of **α** and plotting the trade-off between perceptual quality and distortion.  
 
 ---
 
 ### **Testing Approach**  
-We evaluate the pipeline using a **pre-trained Variational Autoencoder (VAE)**, following a reference research paper. The testing includes:
+We evaluate the pipeline using a **pre-trained Variational Autoencoder (VAE)** (stabilityai/sd-vae-ft-ema). The testing includes:
 - **Paired image testing**: Using corresponding noisy and clean images.
 - **Unpaired image testing**: Testing on unseen images to evaluate generalization.
 
