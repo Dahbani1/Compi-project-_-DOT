@@ -23,11 +23,10 @@ Organized into **six folders**, containing :
 
 #### **Testing Data (Inference Phase Input)**  
 Organized into **three separate folders**:
-- **Clean test images**
-- **Noisy test images**
-- **Restored test images**
+- **Clean test image**
+- **Noisy test image**
+- **Restored test image**
 
-These datasets are crucial for evaluating the effectiveness of the OT-based restoration process.
 
 ---
 
